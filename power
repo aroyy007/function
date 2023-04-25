@@ -1,0 +1,21 @@
+#include<stdio.h>
+int power(int base,int exp);
+int main()
+{
+    int b,e,p;
+    printf("Enter Base : ");
+    scanf("%d",&b);
+    printf("Enter Exponent : ");
+    scanf("%d",&e);
+    p = power(b,e);
+    printf("Power of %d is %d",b,p);
+}
+int power(int base,int exp)
+{
+    int pow = 1;
+    for (int i = 1; i <= exp; i++)
+    {
+        pow *= base;
+    }
+    return pow;
+}
