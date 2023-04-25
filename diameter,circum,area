@@ -1,0 +1,41 @@
+#include<stdio.h>
+
+// declare the functions and their return types
+float diameter(int radius);
+float circumference(int radius);
+float area(int radius);
+
+int main()
+{
+    int r;
+    printf("Enter radius: ");
+    scanf("%d",&r);
+    
+    // call the functions with the radius input and store the return value
+    float a = diameter(r);
+    printf("Diameter is %f\n",a);
+    
+    float b = circumference(r);
+    printf("Circumference is %f\n",b);
+    
+    float c = area(r);
+    printf("Area is %f\n",c);
+    
+    return 0;
+}
+
+// define the functions with the parameter types and return types declared earlier
+float diameter(int radius)
+{
+    return 2 * radius;
+}
+
+float circumference(int radius)
+{
+    return 2 * 3.1416 * radius;
+}
+
+float area(int radius)
+{
+    return 3.1416 * radius * radius;
+}
